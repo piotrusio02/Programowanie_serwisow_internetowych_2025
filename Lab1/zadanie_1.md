@@ -11,4 +11,4 @@ async def main() -> None:
 if __name__ == "__main__":
     with asyncio.Runner() as runner:
         runner.run(main())
-```python
+```
