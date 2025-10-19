@@ -9,7 +9,7 @@ class PostRepository(IPostRepository):
 
     async def get_all_posts(self) -> Iterable[PostRecord] | None:
         async with aiohttp.ClientSession() as session:
-            async with session.get(consts.API_SENSOR_URL) as response:
+            async with session.get(consts.API_POST_URL) as response:
                 if response.status != 200:
                     return None
                 json_posts = await response.json()
@@ -35,4 +35,5 @@ class PostRepository(IPostRepository):
                 "title": post.title,
                 "body": post.body
             })
+
         return json.dumps(json_posts)
