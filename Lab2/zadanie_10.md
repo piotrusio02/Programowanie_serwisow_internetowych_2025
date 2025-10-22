@@ -1,5 +1,6 @@
 Przygotować program, który tworzy potok zadań asynchronicznych: żądanie do dowolnego API pobiera dane, następnie przetwarza je i finalnie zapisuje wynik na w systemie plików (np. w pliku tekstowym).
-```Pythonimport aiohttp
+```Python
+import aiohttp
 import asyncio
 import datetime
 
